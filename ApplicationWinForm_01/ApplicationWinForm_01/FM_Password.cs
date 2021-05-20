@@ -89,7 +89,7 @@ namespace ApplicationWinForm_01
 
                 cmd.Transaction = Tran; // 커맨드에 트랜잭션 사용여부 등록
                 cmd.Connection = Connect; // 커맨드에 접속 정보 입력
-                cmd.CommandText = "UPDATE TB_USER_NHJ SET PW = '" + sNewPw + "'";
+                cmd.CommandText = "UPDATE TB_USER_NHJ SET PW = '" + sNewPw + "'WHERE USERID = '"+ sLoginid+"'";
                 cmd.ExecuteNonQuery(); // C,U,D 실행 함수 실행 (create, update, delete 문서관리할 때 사용)
 
                 Tran.Commit(); // 변경 내용 승인

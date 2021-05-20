@@ -88,8 +88,9 @@ namespace ApplicationWinForm_01
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // Form1
+            // FM_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +101,7 @@ namespace ApplicationWinForm_01
             this.Controls.Add(this.btnPasswordChange);
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FM_Login";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
