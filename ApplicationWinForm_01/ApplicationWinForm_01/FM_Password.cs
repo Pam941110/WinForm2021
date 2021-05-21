@@ -93,14 +93,10 @@ namespace ApplicationWinForm_01
                 cmd.ExecuteNonQuery(); // C,U,D 실행 함수 실행 (create, update, delete 문서관리할 때 사용)
 
                 Tran.Commit(); // 변경 내용 승인
+                // 4. 변경여부 메세지 처리
                 MessageBox.Show("정상적으로 변경 하였습니다.");
                 this.Close();
-
             }
-
-            // 4. 변경여부 메세지 처리
-
-
         }
     }
 }

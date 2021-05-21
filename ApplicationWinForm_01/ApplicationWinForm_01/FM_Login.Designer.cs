@@ -79,6 +79,8 @@ namespace ApplicationWinForm_01
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(268, 27);
             this.txtPassword.TabIndex = 4;
+            
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 
@@ -102,7 +104,7 @@ namespace ApplicationWinForm_01
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.label1);
             this.Name = "FM_Login";
-            this.Text = "Form1";
+            this.Text = "LOG IN ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
