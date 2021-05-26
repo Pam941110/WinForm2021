@@ -34,6 +34,7 @@ namespace ApplicationWinForm_01
             this.M_SYSTEM = new System.Windows.Forms.ToolStripMenuItem();
             this.MDI_Test = new System.Windows.Forms.ToolStripMenuItem();
             this.MDI_TEST2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.FM_ITEM = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.stb_Search = new System.Windows.Forms.ToolStripButton();
             this.stb_Insert = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +48,7 @@ namespace ApplicationWinForm_01
             this.tss_UserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tss_NowDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.myTabControl1 = new ApplicationWinForm_01.MyTabControl();
             this.MenuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -66,7 +68,8 @@ namespace ApplicationWinForm_01
             // 
             this.M_SYSTEM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MDI_Test,
-            this.MDI_TEST2});
+            this.MDI_TEST2,
+            this.FM_ITEM});
             this.M_SYSTEM.Name = "M_SYSTEM";
             this.M_SYSTEM.Size = new System.Drawing.Size(98, 24);
             this.M_SYSTEM.Text = "시스템관리";
@@ -82,6 +85,12 @@ namespace ApplicationWinForm_01
             this.MDI_TEST2.Name = "MDI_TEST2";
             this.MDI_TEST2.Size = new System.Drawing.Size(228, 26);
             this.MDI_TEST2.Text = "toolStripMenuItem1";
+            // 
+            // FM_ITEM
+            // 
+            this.FM_ITEM.Name = "FM_ITEM";
+            this.FM_ITEM.Size = new System.Drawing.Size(228, 26);
+            this.FM_ITEM.Text = "toolStripMenuItem1";
             // 
             // toolStrip
             // 
@@ -160,6 +169,7 @@ namespace ApplicationWinForm_01
             this.stb_Close.Text = "닫기";
             this.stb_Close.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.stb_Close.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.stb_Close.Click += new System.EventHandler(this.stb_Close_Click);
             // 
             // stb_Exit
             // 
@@ -213,11 +223,22 @@ namespace ApplicationWinForm_01
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // myTabControl1
+            // 
+            this.myTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.myTabControl1.Location = new System.Drawing.Point(0, 111);
+            this.myTabControl1.Name = "myTabControl1";
+            this.myTabControl1.SelectedIndex = 0;
+            this.myTabControl1.Size = new System.Drawing.Size(1116, 370);
+            this.myTabControl1.TabIndex = 4;
+            // 
             // FM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1116, 507);
+            this.Controls.Add(this.myTabControl1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.MenuStrip);
@@ -225,6 +246,7 @@ namespace ApplicationWinForm_01
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "FM_Main";
             this.Text = "App_Dev_Ver1.0";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -255,5 +277,7 @@ namespace ApplicationWinForm_01
         private System.Windows.Forms.ToolStripStatusLabel tss_NowDate;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem MDI_TEST2;
+        private MyTabControl myTabControl1;
+        private System.Windows.Forms.ToolStripMenuItem FM_ITEM;
     }
 }

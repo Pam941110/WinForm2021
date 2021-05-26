@@ -1,15 +1,15 @@
 ﻿
-namespace Dev_Form
+namespace DEV_Form
 {
-    partial class MDI_TEST2
+    partial class MDI_TEST
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -24,8 +24,8 @@ namespace Dev_Form
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -34,20 +34,19 @@ namespace Dev_Form
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 196);
+            this.textBox1.Location = new System.Drawing.Point(157, 204);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(555, 27);
+            this.textBox1.Size = new System.Drawing.Size(476, 23);
             this.textBox1.TabIndex = 0;
             // 
-            // MDI_TEST2
+            // MDI_TEST
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MDI_TEST2";
-            this.Text = "MDI_TEST2";
+            this.Name = "MDI_TEST";
+            this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -59,3 +58,4 @@ namespace Dev_Form
         private System.Windows.Forms.TextBox textBox1;
     }
 }
+
